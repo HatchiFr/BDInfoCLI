@@ -30,9 +30,11 @@ namespace BDInfo
                 BDROM.PlaylistFileScanError += new BDROM.OnPlaylistFileScanError(BDROM_PlaylistFileScanError);
                 BDROM.Scan();
 
-                System.Console.WriteLine(BDROM.DirectoryRoot.FullName);
+                //System.Console.WriteLine(BDROM.DirectoryRoot.FullName);
 
-                System.Console.WriteLine(string.Format("Detected BDMV Folder: {0} ({1})", BDROM.DirectoryBDMV.FullName, BDROM.VolumeLabel));
+                System.Console.WriteLine(string.Format("Detected BDMV Folder Full Path: {0}", BDROM.DirectoryBDMV.FullName));
+
+                System.Console.WriteLine(string.Format("Disc Title: ({0})", BDROM.VolumeLabel));
 
                 List<string> features = new List<string>();
                 if (BDROM.Is50Hz)
@@ -555,7 +557,7 @@ namespace BDInfo
                 System.Console.WriteLine("(*) Some playlists on this disc have hidden tracks. These tracks are marked with an asterisk.");
             }
 
-            selectedPlayLists.Add(plsDict[getIntIndex(1, index-1)]);
+            //selectedPlayLists.Add(plsDict[getIntIndex(1, index-1)]);
         }
 
         #endregion

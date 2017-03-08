@@ -64,9 +64,9 @@ namespace BDInfoCli
                     run.SelectPlayList();
                 }
                 
-                run.AddStreamFilesInPlaylists();
+                //run.AddStreamFilesInPlaylists();
                 run.ScanBDROM();
-                run.GenerateReport(options.output);
+                //run.GenerateReport(options.output);
             }
         }
 
